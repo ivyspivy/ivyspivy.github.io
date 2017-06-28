@@ -65,3 +65,14 @@ body {
   font-size: 27px;
   text-align: center;
 }
+
+.fa{
+	font-size: 100px;
+  color: #FF595E;
+  text-align: center;
+}
+
+.fa:hover{
+	color: white;
+	font-size: 120px;
+}
