@@ -49,6 +49,11 @@ body {
   text-align: center;
 }
 
+.glyphicon-large:hover{
+	color: white;
+	font-size: 120px;
+}
+
 .contact h2{
   color: #70C1B3;
   font-size: 50px;
