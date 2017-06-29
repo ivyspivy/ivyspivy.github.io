@@ -11,8 +11,8 @@ body {
   padding-top: 20%;
   padding-bottom: 20%;
   margin-bottom: 0;
-
 }
+
 .jumbotron h1, p{
   color: #CFCCD6;
   font-size: 100px;
@@ -86,7 +86,7 @@ font-size: 100px;
 
 .links .fa:hover{
 	color: #5D707F;
-	 -webkit-animation: spin 1s;
+	 -webkit-animation: spin 750ms;
 }
 
 
