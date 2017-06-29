@@ -68,10 +68,17 @@ body {
   text-align: center;
 }
 
-.contact p, hr{
+.contact p{
   color: #70C1B3;
   font-size: 27px;
   text-align: center;
+}
+
+.contact hr{
+	background-color: #70C1B3;
+	height: 5px;
+	width: 75%;
+	border: none;
 }
 
 .fa {
