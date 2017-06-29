@@ -1,44 +1,47 @@
 body {
 	background: #3A4E48;
 	color: #f7f7f7;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Oswald', sans-serif;
 }
 
 .jumbotron {
-	background: #70C1B3;
-	color: #3A4E48;
+	background-color: #3A4E48;
 	text-align: center;
   background-size: cover;
   padding-top: 20%;
   padding-bottom: 20%;
   margin-bottom: 0;
+
 }
 .jumbotron h1, p{
-  color: #3A4E48;
+  color: #CFCCD6;
   font-size: 100px;
+	animation-duration: 3s;
 }
+
 
 .jumbotron hr{
 	width: 50%;
+	margin: auto;
 	border: none;
-	background-color: #3A4E48;
+	background-color: #CFCCD6;
   height: 10px;
 }
 
 .aboutMe{
-  background-color: #F9627D;
-  color: #3D5A80;
+  background-color: #88B7B5;
   text-align: center;
 }
-.aboutMe h1, .aboutMe i{
+.aboutMe h1, .aboutMe i, .aboutMe p{
   color: #3D5A80;
   font-size: 40px;
 }
 .aboutMe p{
   font-size: 25px;
 }
+
 .links{
-  background-color: #6A7B76;
+  background-color: #C1CAD6;
 
 }
 .links p, .links h1{
@@ -51,50 +54,51 @@ body {
   font-size: 50px;
 }
 
-.glyphicon-large {
-	font-size: 100px;
-  color: #FF595E;
-  text-align: center;
-}
-
-.glyphicon-large:hover{
-	color: white;
-	font-size: 120px;
-}
-
 .contact h2{
-  color: #70C1B3;
+  color: #C1CAD6;
   font-size: 50px;
   text-align: center;
 }
 
 .contact p{
-  color: #70C1B3;
+  color: #C1CAD6;
   font-size: 27px;
   text-align: center;
 }
 
 .contact hr{
-	background-color: #70C1B3;
+	margin: auto;
+	background-color: #C1CAD6;
 	height: 5px;
-	width: 75%;
 	border: none;
 }
 
-.fa {
+.contact .fa{
+	color: #C1CAD6;
+}
+.links .fa {
 font-size: 100px;
-  color: #FF595E;
+  color: #6C6EA0;
   text-align: center;
 }
 
-.fa:hover{
-	color: white;
-	font-size: 120px;
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+
+.links .fa:hover{
+	color: #5D707F;
+	 -webkit-animation: spin 1s;
 }
+
+
 
 footer .fa{
 	color: #70C1B3;
 	font-size: 50px;
+}
+
+footer hr{
+	width: 50%;
+	align: center;
 }
 
 ::-webkit-scrollbar {
