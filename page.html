@@ -2,6 +2,7 @@
 <html lang="en">
 <title> Ivy Chen </title>
 <script src="https://use.fontawesome.com/13b7bef1f9.js"></script>
+
 <head>
   <link rel="shortcut icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -13,7 +14,7 @@
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -23,14 +24,14 @@
 <body>
 
 
-<!-- SECTION 1: jumbotron -->
+  <!-- SECTION 1: jumbotron -->
   <section>
     <div class="jumbotron">
-       <img class="img-circle" src="">
-      <div class= "container animated zoomIn">
-        <hr align = "center">
+      <img class="img-circle" src="">
+      <div class="container animated zoomIn">
+        <hr>
         <h1> <b> IVY CHEN <b/></h1>
-        <hr align = "center">
+        <hr>
         <p> <br> HMC Quantum Computing '20</p>
         <br>
       </div>
@@ -38,49 +39,51 @@
   </section>
 
 
-<!-- ABOUT ME SECTION -->
+  <!-- ABOUT ME SECTION -->
   <section>
     <div class="aboutMe">
       <div class="container">
         <br><br>
-        <h1> <b> About Me </b> <i class="fa fa-user-circle-o"> </i> </h1>
-        <p> <br> I am a sophomore at Harvey Mudd College completing a joint major in physics and CS, along
-          with a concentration in economics. I am currently working as an instructor for the girls who code 2017 Summer Immersion Program.
-           </p>
+        <h1> <b> About Me </b> <a class="fa fa-plus-circle" onclick="showhide('aboutMeDiv')" > </a> </h1>
+        <div id="aboutMeDiv" style="display: none;" overflow-y="overflow:hidden">
+          <p> <br> I am a sophomore at Harvey Mudd College completing a joint major in physics and CS, along with a concentration in economics. I am currently working as an instructor for the girls who code 2017 Summer Immersion Program.
+        </div>
+        </p>
         <br> </br>
 
       </div>
     </div>
   </section>
 
-<!-- LINKS -->
+  <!-- LINKS -->
   <section>
     <div class="links">
-      <br><br><br>
-      <h1> <b> Find Me! </b> </h1>
       <br><br>
+      <h1> <b> Find Me! </b> <a class="fa fa-plus-circle" onclick="showhide('linkDiv')"> </a> </h1>
       <div class="container">
-        <div class="row">
+        <br>
+        <div class="linkIcons" id="linkDiv" class="row" style="display: none;">
           <div class="col-md-4">
-            <p><a href="https://docs.google.com/document/d/1qMhiAyCsbj87g_X47z_vuYyY5edY4B1RbxD125TTGno/edit?usp=sharing"  target="_blank"><i class="fa fa-files-o" > </i></a></p>
-            <p> Click me for a resume! </p>
+            <p><a href="https://docs.google.com/document/d/1qMhiAyCsbj87g_X47z_vuYyY5edY4B1RbxD125TTGno/edit?usp=sharing" target="_blank"><i class="fa fa-files-o" > </i></a></p>
+            <p> Resume </p>
           </div>
           <div class="col-md-4">
             <p><a href="http://github.com/ivyspivy"><i class="fa fa-github"  target="_blank"></i></a></p>
-            <p> Click me for my github! </p>
+            <p> Github </p>
           </div>
           <div class="col-md-4">
             <p><a href="http://linkedin.com/in/ivy-chen-236a1311a/" target="_blank"><i class="fa fa-linkedin" ></i></a></p>
-            <p> Click me for my LinkedIn! </p>
+            <p> LinkedIn </p>
           </div>
+          <br><br>
         </div>
       </div>
-      <br><br><br>
+      <br><br>
     </div>
   </section>
 
 
-<!-- CONTACTS -->
+  <!-- CONTACTS -->
   <footer>
     <br><br>
     <div class="row">
@@ -96,13 +99,26 @@
     </div>
   </footer>
 
-
-
-
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+    function showhide(id) {
+      var div = document.getElementById(id);
+      if (div.style.display !== "none") {
+        $(div).slideToggle(500);
+      } else {
+        $(div).slideToggle(500);
+      }
+    }
+
+    function clicked(icon){
+      if (icon == 'fa-minus-circle'){
+        $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
+      }else{
+        $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
+      }
+    }
+  </script>
 </body>
 
 </html>
