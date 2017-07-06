@@ -78,7 +78,7 @@ body {
   color: #C1CAD6;
 }
 
-.fa-plus-circle:hover{
+.fa-user-circle-o:hover, .fa-street-view:hover{
 	color: #5D707F;
   -webkit-animation: spin 750ms;
 	text-decoration: none;

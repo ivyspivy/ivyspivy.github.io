@@ -44,7 +44,7 @@
     <div class="aboutMe">
       <div class="container">
         <br><br>
-        <h1> <b> About Me </b> <a class="fa fa-plus-circle" onclick="showhide('aboutMeDiv')" > </a> </h1>
+        <h1> <b> About Me </b> <a class="fa fa-user-circle-o" onclick="showhide('aboutMeDiv')" > </a> </h1>
         <div id="aboutMeDiv" style="display: none;" overflow-y="overflow:hidden">
           <p> <br> I am a sophomore at Harvey Mudd College completing a joint major in physics and CS, along with a concentration in economics. I am currently working as an instructor for the girls who code 2017 Summer Immersion Program.
           </p>
@@ -54,11 +54,14 @@
     </div>
   </section>
 
+
+
+
   <!-- LINKS -->
   <section>
     <div class="links">
       <br><br>
-      <h1> <b> Find Me! </b> <a class="fa fa-plus-circle" onclick="showhide('linkDiv')"> </a> </h1>
+      <h1> <b> Find Me! </b> <a class="fa fa-street-view" onclick="showhide('linkDiv')"> </a> </h1>
       <div class="container">
         <br>
         <div class="linkIcons" id="linkDiv" class="row" style="display: none;">
@@ -110,11 +113,12 @@
       }
     }
 
+
     function clicked(icon){
       if (icon == 'fa-minus-circle'){
-        $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
+        $(this).find('i').toggleClass('fa-plus-circle');
       }else{
-        $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
+        $(this).find('i').toggleClass('fa-minus-circle');
       }
     }
   </script>
