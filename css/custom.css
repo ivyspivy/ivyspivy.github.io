@@ -5,7 +5,7 @@ body {
 }
 
 .jumbotron {
-  background-color: #3A4E48;
+  background-color: #F56476;
   text-align: center;
   background-size: cover;
   padding-top: 20%;
@@ -14,7 +14,7 @@ body {
 }
 
 .jumbotron h1, p {
-  color: #CFCCD6;
+  color: #FBF2EB;
   font-size: 100px;
   animation-duration: 3s;
 }
@@ -23,17 +23,17 @@ body {
   width: 50%;
   margin: auto;
   border: none;
-  background-color: #CFCCD6;
+  background-color: #FBF2EB;
   height: 10px;
 }
 
 .aboutMe {
-  background-color: #88B7B5;
+  background-color: #2C363F;
   text-align: center;
 }
 
 .aboutMe h1, .aboutMe i, .aboutMe p {
-  color: #3D5A80;
+  color: #FF5376;
   font-size: 50px;
 }
 
@@ -42,46 +42,17 @@ body {
 }
 
 .links {
-  background-color: #C1CAD6;
+  background-color: #F45B69;
 }
 
 .links p, .links h1 {
   font-size: 25px;
   text-align: center;
-  color: #3A4E48
+  color: #2C363F;
 }
 
 .links h1 {
   font-size: 50px;
-}
-
-.contact h2 {
-  color: #C1CAD6;
-  font-size: 50px;
-  text-align: center;
-}
-
-.contact p {
-  color: #C1CAD6;
-  font-size: 27px;
-  text-align: center;
-}
-
-.contact hr {
-  margin: auto;
-  background-color: #C1CAD6;
-  height: 5px;
-  border: none;
-}
-
-.contact .fa {
-  color: #C1CAD6;
-}
-
-.fa-user-circle-o:hover, .fa-street-view:hover{
-	color: #5D707F;
-  -webkit-animation: spin 750ms;
-	text-decoration: none;
 }
 
 .links {
@@ -90,14 +61,8 @@ body {
 
 .linkIcons .fa {
   font-size: 100px;
-  color: #6C6EA0;
+  color: #2C363F;
   text-align: center;
-}
-
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
 }
 
 .linkIcons .fa:hover {
@@ -106,15 +71,47 @@ body {
 }
 
 
-footer .fa {
-  color: #70C1B3;
+.contact h2 {
+  color: #F45B69;
   font-size: 50px;
+  text-align: center;
 }
 
-footer hr {
-  width: 50%;
-  align: center;
+.contact p {
+  color: #F45B69;
+  font-size: 27px;
+  text-align: center;
 }
+
+.contact hr {
+  margin: auto;
+  background-color: #F45B69;
+  height: 5px;
+  border: none;
+}
+
+.contact .fa {
+  color: #F45B69;
+}
+
+footer {
+  background-color: #1D2329;
+}
+
+.fa-user-circle-o:hover, .fa-street-view:hover{
+	color: #5D707F;
+  -webkit-animation: spin 750ms;
+	text-decoration: none;
+}
+
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+
 
 ::-webkit-scrollbar {
   width: 10px;
