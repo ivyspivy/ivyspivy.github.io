@@ -99,7 +99,7 @@ footer {
 
 .fa-user-circle-o:hover, .fa-street-view:hover {
   color: #5D707F;
-  -webkit-animation: spinBack 750ms;
+  -webkit-animation: spinBack 1.5s;
   text-decoration: none;
 }
 
