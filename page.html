@@ -3,6 +3,8 @@
 <title> Ivy Chen </title>
 <script src="https://use.fontawesome.com/13b7bef1f9.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <head>
   <link rel="shortcut icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -20,12 +22,14 @@
   <!-- SECTION 1: jumbotron -->
   <section>
     <div class="jumbotron">
-      <img class="img-circle" src="">
       <div class="container animated zoomIn">
         <hr>
-        <h1> <b> IVY CHEN <b/></h1>
+        <h1 id = "translate-name"> <b> IVY CHEN <b/></h1>
         <hr>
-        <p> <br> HMC Physics + Computer Science '20</p>
+        <div>
+        <br>
+        <p id = "translate-major">  HMC Physics + Computer Science '20 </p>
+        </div>
         <br>
       </div>
     </div>
@@ -35,11 +39,13 @@
   <!-- ABOUT ME SECTION -->
   <section>
     <div class="aboutMe">
-      <div class="container">
+      <div class ="container">
         <br><br>
-        <h1> <b> About Me </b> <a class="fa fa-user-circle-o" onclick="showhide('aboutMeDiv')" > </a> </h1>
+        <h1 id = "translate-aboutMeHeader"> <b> About Me </b> <a class="fa fa-user-circle-o" onclick="showhide('aboutMeDiv')" > </a> </h1>
         <div id="aboutMeDiv" style="display: none;" overflow-y="overflow:hidden">
-          <p> <br> I am a sophomore at Harvey Mudd College completing a joint major in physics and CS, along with a concentration in economics. I am currently working as an instructor for the girls who code 2017 Summer Immersion Program.
+          <br>
+          <p id = "translate-aboutMe"> I am a sophomore at Harvey Mudd College completing a joint major in physics and CS,
+             along with a concentration in economics. I am currently working as an instructor for the girls who code 2017 Summer Immersion Program.
           </p>
         </div>
         <br> <br>
@@ -51,13 +57,13 @@
   <section>
     <div class="links">
       <br><br>
-      <h1> <b> Connect with Me! </b> <a class="fa fa-street-view" onclick="showhide('linkDiv')"> </a> </h1>
+      <h1 id = "translate-connect"> <b> Connect with Me! </b> <a class="fa fa-street-view" onclick = "showhide('linkDiv')"> </a> </h1>
       <div class="container">
         <br>
         <div class="linkIcons" id="linkDiv" class="row" style="display: none;">
           <div class="col-md-4">
             <p><a href="https://docs.google.com/document/d/1qMhiAyCsbj87g_X47z_vuYyY5edY4B1RbxD125TTGno/edit?usp=sharing" target="_blank"><i class="fa fa-files-o" > </i></a></p>
-            <p> Resume </p>
+            <p id = "translate-resume"> Resume </p>
           </div>
           <div class="col-md-4">
             <p><a href="http://github.com/ivyspivy" target="_blank"><i class="fa fa-github"></i></a></p>
@@ -81,7 +87,7 @@
     <div class="row">
       <div class="container">
         <div class="contact">
-          <h2><i class="fa fa-pencil" onclick="spin(fa fa-pencil)"> </i>  <b> Contact </b> <i class="fa fa-envelope"> </i> </h2>
+          <h2 id = "translate-contact"><i class="fa fa-pencil" onclick="spin(fa fa-pencil)"> </i>  <b> Contact </b> <i class="fa fa-envelope"> </i> </h2>
           <br>
           <hr>
           <br>
@@ -89,6 +95,9 @@
         </div>
       </div>
     </div>
+    <div id = "translate-button">
+    <h5> <button onclick = "translate()"> 翻譯成中文 </button> </a></h5>
+  </div>
 <!--
     <div id="google_translate_element"></div>
 -->
@@ -106,10 +115,21 @@
       }
     }
   </script>
-
+  <script>
+    function translate(){
+      document.getElementById("translate-name").innerHTML = "陳艾薇"
+      document.getElementById("translate-major").innerHTML = "主修量子物理 + 電腦科學";
+      document.getElementById("translate-aboutMeHeader").innerHTML = "<b> 闗於我 </b> <a class= \"fa fa-user-circle-o\" onclick= \"showhide('aboutMeDiv')\"> </a>";
+      document.getElementById("translate-aboutMe").innerHTML = "我是";
+      document.getElementById("translate-connect").innerHTML = "<b>我的網頁</b> <a class= \"fa fa-street-view\" onclick= \"showhide('linkDiv')\"> </a>";
+      document.getElementById("translate-resume").innerHTML = "履歷表";
+      document.getElementById("translate-contact").innerHTML = "<i class= \"fa fa-pencil\" onclick= \"spin(fa fa-pencil)\"> </i>  <b> 電子郵件 </b> <i class=\"fa fa-envelope\"> </i>";
+    }
+  </script>
 <!--
 
-  <script type="text/javascript">
+  <script
+  type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'zh-CN,zh-TW', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, multilanguagePage: true}, 'google_translate_element');
 }

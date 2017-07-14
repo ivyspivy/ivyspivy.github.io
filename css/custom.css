@@ -1,5 +1,5 @@
 body {
-  background: #3A4E48;
+  background: #1D2329;
   color: #f7f7f7;
   font-family: 'Oswald', sans-serif;
 }
@@ -95,6 +95,19 @@ body {
 
 footer {
   background-color: #1D2329;
+  text-align: center;
+}
+
+button {
+    background-color: #1D2329;
+    color: red;
+    border: 2px solid #f44336;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #f44336;
+    color: white;
 }
 
 .fa-user-circle-o:hover, .fa-street-view:hover {
