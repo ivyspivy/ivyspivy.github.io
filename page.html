@@ -24,11 +24,11 @@
     <div class="jumbotron">
       <div class="container animated zoomIn">
         <hr>
-        <h1 id = "translate-name"> <b> IVY CHEN <b/></h1>
+        <h1 class = "translate-name"><b> IVY CHEN <b/></h1>
         <hr>
         <div>
         <br>
-        <p id = "translate-major">  HMC Physics + Computer Science '20 </p>
+        <p class = "translate-major">  HMC Physics + Computer Science '20 </p>
         </div>
         <br>
       </div>
@@ -41,10 +41,10 @@
     <div class="aboutMe">
       <div class ="container">
         <br><br>
-        <h1 id = "translate-aboutMeHeader"> <b> About Me </b> <a class="fa fa-user-circle-o" onclick="showhide('aboutMeDiv')" > </a> </h1>
+        <h1 class = "translate-aboutMeHeader"> <b> About Me </b> <a class="fa fa-user-circle-o" onclick="showhide('aboutMeDiv')" > </a> </h1>
         <div id="aboutMeDiv" style="display: none;" overflow-y="overflow:hidden">
           <br>
-          <p id = "translate-aboutMe"> I am a sophomore at Harvey Mudd College completing a joint major in physics and CS,
+          <p class = "translate-aboutMe"> I am a sophomore at Harvey Mudd College completing a joint major in physics and CS,
              along with a concentration in economics. I am currently working as an instructor for the girls who code 2017 Summer Immersion Program.
           </p>
         </div>
@@ -57,7 +57,7 @@
   <section>
     <div class="links">
       <br><br>
-      <h1 id = "translate-connect"> <b> Connect with Me! </b> <a class="fa fa-street-view" onclick = "showhide('linkDiv')"> </a> </h1>
+      <h1 class = "translate-connect"> <b> Connect with Me! </b> <a class="fa fa-street-view" onclick = "showhide('linkDiv')"> </a> </h1>
       <div class="container">
         <br>
         <div class="linkIcons" id="linkDiv" class="row" style="display: none;">
@@ -87,7 +87,7 @@
     <div class="row">
       <div class="container">
         <div class="contact">
-          <h2 id = "translate-contact"><i class="fa fa-pencil" onclick="spin(fa fa-pencil)"> </i>  <b> Contact </b> <i class="fa fa-envelope"> </i> </h2>
+          <h2 class = "translate-contact"><i class="fa fa-pencil" onclick="spin(fa fa-pencil)"> </i>  <b> Contact </b> <i class="fa fa-envelope"> </i> </h2>
           <br>
           <hr>
           <br>
@@ -96,7 +96,7 @@
       </div>
     </div>
     <div id = "translate-button">
-    <h5> <button onclick = "translate()"> 翻譯成中文 </button> </a></h5>
+    <h5> <button class = "onClickButton" onclick = "translate()">翻譯成中文</button></h5>
   </div>
 <!--
     <div id="google_translate_element"></div>
@@ -117,13 +117,25 @@
   </script>
   <script>
     function translate(){
-      document.getElementById("translate-name").innerHTML = "陳艾薇"
-      document.getElementById("translate-major").innerHTML = "主修量子物理 + 電腦科學";
-      document.getElementById("translate-aboutMeHeader").innerHTML = "<b> 闗於我 </b> <a class= \"fa fa-user-circle-o\" onclick= \"showhide('aboutMeDiv')\"> </a>";
-      document.getElementById("translate-aboutMe").innerHTML = "我是";
-      document.getElementById("translate-connect").innerHTML = "<b>我的網頁</b> <a class= \"fa fa-street-view\" onclick= \"showhide('linkDiv')\"> </a>";
-      document.getElementById("translate-resume").innerHTML = "履歷表";
-      document.getElementById("translate-contact").innerHTML = "<i class= \"fa fa-pencil\" onclick= \"spin(fa fa-pencil)\"> </i>  <b> 電子郵件 </b> <i class=\"fa fa-envelope\"> </i>";
+      if($("button.onClickButton").html("翻譯成中文")){
+        $("h1.translate-name").html("<b>陳艾薇</b>");
+        $("p.translate-major").html("主修量子物理 + 電腦科學");
+        $("h1.translate-aboutMeHeader").html("<b> 闗於我 </b> <a class= \"fa fa-user-circle-o\" onclick= \"showhide('aboutMeDiv')\"> </a>");
+        $("p.translate-aboutMe").html("還沒翻譯");
+        $("h1.translate-connect").html("<b>我的網頁</b> <a class= \"fa fa-street-view\" onclick= \"showhide('linkDiv')\"> </a>");
+        $("p.translate-resume").html("履歷表");
+        $("h2.translate-contact").html("<i class= \"fa fa-pencil\" onclick= \"spin(fa fa-pencil)\"> </i>  <b> 電子郵件 </b> <i class=\"fa fa-envelope\"> </i>");
+        $("button.onClickButton").html("Translate to English");
+      }else{
+        $("h1.translate-name").html("<b> IVY CHEN </b>");
+        $("p.translate-major").html(" HMC Physics + Computer Science '20 ");
+        $("h1.translate-aboutMeHeader").html("<b> About Me </b> <a class= \"fa fa-user-circle-o\" onclick= \"showhide('aboutMeDiv')\"> </a>");
+        $("p.translate-aboutMe").html("I am a sophomore at Harvey Mudd College completing a joint major in physics and CS, along with a concentration in economics. I am currently working as an instructor for the girls who code 2017 Summer Immersion Program.");
+        $("h1.translate-connect").html("<b> Connect with Me! </b> <a class= \"fa fa-street-view\" onclick= \"showhide('linkDiv')\"> </a>");
+        $("p.translate-resume").html("Resume");
+        $("h2.translate-contact").html("<i class= \"fa fa-pencil\" onclick= \"spin(fa fa-pencil)\"> </i>  <b> Contact </b> <i class=\"fa fa-envelope\"> </i>");
+        $("button.onClickButton").html("翻譯成中文");
+      }
     }
   </script>
 <!--
