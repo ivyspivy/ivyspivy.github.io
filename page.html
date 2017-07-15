@@ -63,7 +63,7 @@
         <div class="linkIcons" id="linkDiv" class="row" style="display: none;">
           <div class="col-md-4">
             <p><a href="https://docs.google.com/document/d/1qMhiAyCsbj87g_X47z_vuYyY5edY4B1RbxD125TTGno/edit?usp=sharing" target="_blank"><i class="fa fa-files-o" > </i></a></p>
-            <p id = "translate-resume"> Resume </p>
+            <p class = "translate-resume"> Resume </p>
           </div>
           <div class="col-md-4">
             <p><a href="http://github.com/ivyspivy" target="_blank"><i class="fa fa-github"></i></a></p>
@@ -116,8 +116,8 @@
     }
   </script>
   <script>
-    function translate(){
-      if($("button.onClickButton").html("翻譯成中文")){
+    $("button.onClickButton").click(function(){
+      if($("button.onClickButton").html() === "翻譯成中文"){
         $("h1.translate-name").html("<b>陳艾薇</b>");
         $("p.translate-major").html("主修量子物理 + 電腦科學");
         $("h1.translate-aboutMeHeader").html("<b> 闗於我 </b> <a class= \"fa fa-user-circle-o\" onclick= \"showhide('aboutMeDiv')\"> </a>");
@@ -136,7 +136,7 @@
         $("h2.translate-contact").html("<i class= \"fa fa-pencil\" onclick= \"spin(fa fa-pencil)\"> </i>  <b> Contact </b> <i class=\"fa fa-envelope\"> </i>");
         $("button.onClickButton").html("翻譯成中文");
       }
-    }
+    });
   </script>
 <!--
 
